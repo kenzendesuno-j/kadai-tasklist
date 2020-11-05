@@ -8,5 +8,6 @@ Rails.application.routes.draw do
   delete 'logout', to: 'sessions#destroy'
   
   resources :tasks
-  resources :users, only: [:index, :show, :new, :create]
+  #不要なルーティングを'resources :user'から削除 [:index, :show]
+  resources :users, only: [:new, :create]
 end

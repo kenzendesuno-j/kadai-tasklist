@@ -8,6 +8,8 @@
         <%= paginate @tasks %>
     
     <%= link_to '新規タスクの送信', new_task_path %>
+    <!-- ログアウト追加 -->
+    <%= link_to 'ログアウト', logout_path, method: :delete %>
 <% else %>
     <div class="center jumbotron">
       <div class="text-center">
